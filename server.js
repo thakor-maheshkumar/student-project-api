@@ -15,6 +15,9 @@ mongoose.connect(dbConfig.url,{
 }).catch(err=>{
     console.log("Not connected with databasew")
 })
+app.get('/', function(){
+    res.send({status: 'test'});
+})
 app.listen(process.env.PORT | 3000,()=>{
     console.log('Server is listening on port 3000')
 })
