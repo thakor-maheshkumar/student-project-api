@@ -18,9 +18,6 @@ mongoose.connect(dbConfig.url,{
 app.get('/', function(){
     res.send({status: 'test'});
 })
-app.listen(process.env.PORT | 3000,()=>{
-    console.log('Server is listening on port 3000')
-})
 
 var studentRoute=require('./app/routes/student');
 var teacherRoute=require('./app/routes/teacher');
@@ -28,3 +25,7 @@ var departmentRoute=require('./app/routes/department');
 app.use('/',studentRoute);
 app.use('/',teacherRoute);
 app.use('/',departmentRoute);
+
+app.listen(process.env.PORT | 3000,()=>{
+    console.log('Server is listening on port 3000')
+})
