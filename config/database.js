@@ -1,3 +1,3 @@
 module.exports={
-    url:'mongodb://localhost:27017/angular-student'
+    url:'mongodb+srv://student:student@cluster0.lqyrq.gcp.mongodb.net/students?retryWrites=true&w=majority'
 }
